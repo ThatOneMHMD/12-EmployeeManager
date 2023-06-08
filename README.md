@@ -10,12 +10,17 @@ This is the code files for the corresponsing command-line application that funct
 
 - [Description](#description)
 - [Table of Contents](#table-of-contents)
+- [Screenshot](#screenshot)
 - [Demo Video](#demo-video)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
 - [Credits](#credits)
+
+## Screenshot
+
+![EmployeeManager screenshot (SQL)](https://github.com/ThatOneMHMD/12-EmployeeManager/assets/126360257/9c69ab26-ea9b-4a71-8241-c2b6e60fc4a7)
 
 ## Demo Video
 
