@@ -1,3 +1,5 @@
+-- Seed our database (fill it with random data)
+
 USE employeeManager_DB;
 
 -- Insert departments
