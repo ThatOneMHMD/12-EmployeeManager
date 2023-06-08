@@ -454,7 +454,7 @@ const departmentUtilizedBudget = () => {
   });
 };
 
-// function to delete target department. Uses list of department as options to choose from, if none exist, inform user. Otherwise, proceed. NOTE: the deletion of any department will delete all associated data with it. For example, roles and employees!
+// function to delete target department. Uses list of department as options to choose from, if none exist, inform user. Otherwise, proceed. NOTE: the deletion of any department will delete all associated data with it (ON DELETE CASCADE from db/schema.sql). For example, roles and employees!
 const deleteDepartment = (answers) => {
   const departmentName = answers.deleteDepartment;
 
@@ -484,7 +484,7 @@ const deleteDepartment = (answers) => {
   }
 };
 
-// function to delete target role. Uses list of roles as options to choose from, if none exist, inform user. Otherwise, proceed. NOTE: the deletion of any role will delete all associated employees! (But not departments: it's a cascade relationship where department can have more than one role but a role can only belong to one department!)
+// function to delete target role. Uses list of roles as options to choose from, if none exist, inform user. Otherwise, proceed. NOTE: the deletion of any role will delete all associated employees! (But not departments: it's a cascade relationship -from schema.sql- where department can have more than one role but a role can only belong to one department!)
 const deleteRole = (answers) => {
   const roleTitle = answers.deleteRole;
 
@@ -778,4 +778,4 @@ module.exports = {
   viewEmployeesByDepartment,
 };
 
-// CHECKPOINT!!! ALL WORKS PERFECTLY
+// Checkpoint!

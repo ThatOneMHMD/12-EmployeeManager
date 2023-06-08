@@ -12,6 +12,18 @@
 const inquirer = require('inquirer');
 const importedFunctions = require('./server.js');
 
+// Some packages for the useless intro function
+const gradient = require("gradient-string")
+const figlet = require("figlet");
+
+// function for useless but asthetically pleasing intro that simply reads: "Employee Manager"
+function uselessIntro() {
+  console.clear();
+  figlet(`Employee Manager`, (err, data) => {
+    console.log(gradient.pastel.multiline(data) + '\n');
+  });
+};
+
 // My quesitons in an array.. First, a list of choices is presented, and depending on which option is chosen, follow-up questions are presented. (this is done with the "when" method/keyword)
 const questions = [  
     {
@@ -261,6 +273,9 @@ function init() {
         .prompt(questions)
         .then((answers) => {
 
+            // run uselessIntro
+            uselessIntro();
+
             // ALL available cases: proceed with whichever reponse the user gave!
             switch (answers.query) {
                 case "View all departments":
@@ -328,7 +343,10 @@ function init() {
         });
 };
     
-// Function call to initialize app/inquirer for the first time!
-init();
+// Function call to initialize app/inquirer for the first time! (depalyed because I want the uselessIntro function to run first for the first time!)
+setTimeout(init, 150); 
 
-// CHECKPOINT!!! All good! 
+// Run the uselessIntro for the first time!
+uselessIntro();
+
+// Checkpoint!

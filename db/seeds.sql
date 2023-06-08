@@ -54,10 +54,10 @@ VALUES
   ('Andrew', 'Rodriguez', 10);
 
 -- Insert managers 
-INSERT INTO manager (first_name, last_name, department_id)
+INSERT INTO manager (first_name, last_name, role_id, department_id)
 VALUES
-  ('John', 'Doe', 1),                  -- Marketing Manager
-  ('Emily', 'Williams', 2),             -- Finance Manager
-  ('Robert', 'Miller', 3),              -- HR Manager
-  ('Jessica', 'Taylor', 4),             -- Sales Manager
-  ('Christopher', 'Thomas', 5);         -- Engineering Manager
+  ('John', 'Doe', 1, 1),                  -- Marketing Manager
+  ('Emily', 'Williams', 3, 2),             -- Finance Manager
+  ('Robert', 'Miller', 5, 3),              -- HR Manager
+  ('Jessica', 'Taylor', 7, 4),             -- Sales Manager
+  ('Christopher', 'Thomas', 9, 5);         -- Engineering Manager
